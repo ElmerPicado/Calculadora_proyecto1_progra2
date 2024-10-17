@@ -42,7 +42,7 @@
             b_5 = new Button();
             b_4 = new Button();
             b_multiplicar = new Button();
-            button12 = new Button();
+            b_9 = new Button();
             b_8 = new Button();
             b_7 = new Button();
             b_x2 = new Button();
@@ -75,7 +75,7 @@
             panel1.Controls.Add(b_5);
             panel1.Controls.Add(b_4);
             panel1.Controls.Add(b_multiplicar);
-            panel1.Controls.Add(button12);
+            panel1.Controls.Add(b_9);
             panel1.Controls.Add(b_8);
             panel1.Controls.Add(b_7);
             panel1.Controls.Add(b_x2);
@@ -91,7 +91,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(503, 486);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
+            
             // 
             // b_igual
             // 
@@ -103,6 +103,7 @@
             b_igual.TabIndex = 26;
             b_igual.Text = "=";
             b_igual.UseVisualStyleBackColor = false;
+            b_igual.Click += b_igual_Click;
             // 
             // b_coma
             // 
@@ -124,6 +125,7 @@
             b_0.TabIndex = 24;
             b_0.Text = "0";
             b_0.UseVisualStyleBackColor = true;
+            b_0.Click += b_0_Click;
             // 
             // b_masmenos
             // 
@@ -144,6 +146,7 @@
             b_mas.TabIndex = 22;
             b_mas.Text = "+";
             b_mas.UseVisualStyleBackColor = true;
+            b_mas.Click += b_mas_Click;
             // 
             // b_3
             // 
@@ -154,6 +157,7 @@
             b_3.TabIndex = 21;
             b_3.Text = "3";
             b_3.UseVisualStyleBackColor = true;
+            b_3.Click += b_3_Click;
             // 
             // b_2
             // 
@@ -164,6 +168,7 @@
             b_2.TabIndex = 20;
             b_2.Text = "2";
             b_2.UseVisualStyleBackColor = true;
+            b_2.Click += b_2_Click;
             // 
             // b_1
             // 
@@ -174,6 +179,7 @@
             b_1.TabIndex = 19;
             b_1.Text = "1";
             b_1.UseVisualStyleBackColor = true;
+            b_1.Click += b_1_Click;
             // 
             // button17
             // 
@@ -184,6 +190,7 @@
             button17.TabIndex = 18;
             button17.Text = "-";
             button17.UseVisualStyleBackColor = true;
+            button17.Click += button17_Click;
             // 
             // b_6
             // 
@@ -194,6 +201,7 @@
             b_6.TabIndex = 17;
             b_6.Text = "6";
             b_6.UseVisualStyleBackColor = true;
+            b_6.Click += b_6_Click;
             // 
             // b_5
             // 
@@ -204,6 +212,7 @@
             b_5.TabIndex = 16;
             b_5.Text = "5";
             b_5.UseVisualStyleBackColor = true;
+            b_5.Click += b_5_Click;
             // 
             // b_4
             // 
@@ -214,6 +223,7 @@
             b_4.TabIndex = 15;
             b_4.Text = "4";
             b_4.UseVisualStyleBackColor = true;
+            b_4.Click += b_4_Click;
             // 
             // b_multiplicar
             // 
@@ -225,15 +235,16 @@
             b_multiplicar.Text = "x\r\n";
             b_multiplicar.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // b_9
             // 
-            button12.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button12.Location = new Point(307, 116);
-            button12.Name = "button12";
-            button12.Size = new Size(90, 81);
-            button12.TabIndex = 13;
-            button12.Text = "9";
-            button12.UseVisualStyleBackColor = true;
+            b_9.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            b_9.Location = new Point(307, 116);
+            b_9.Name = "b_9";
+            b_9.Size = new Size(90, 81);
+            b_9.TabIndex = 13;
+            b_9.Text = "9";
+            b_9.UseVisualStyleBackColor = true;
+            b_9.Click += b_9_Click;
             // 
             // b_8
             // 
@@ -244,6 +255,7 @@
             b_8.TabIndex = 12;
             b_8.Text = "8";
             b_8.UseVisualStyleBackColor = true;
+            b_8.Click += b_8_Click;
             // 
             // b_7
             // 
@@ -291,8 +303,7 @@
             b_elevadox.TabIndex = 7;
             b_elevadox.Text = "     y\r\nx  ";
             b_elevadox.UseVisualStyleBackColor = true;
-            b_elevadox.Click += button6_Click;
-            // 
+            
             // b_Dividir
             // 
             b_Dividir.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -312,6 +323,7 @@
             b_diferencial.TabIndex = 5;
             b_diferencial.Text = "n!";
             b_diferencial.UseVisualStyleBackColor = true;
+            b_diferencial.Click += b_diferencial_Click_1;
             // 
             // b_Borrar
             // 
@@ -321,6 +333,7 @@
             b_Borrar.TabIndex = 4;
             b_Borrar.Text = "C";
             b_Borrar.UseVisualStyleBackColor = true;
+            b_Borrar.Click += b_Borrar_Click;
             // 
             // b_Raiz
             // 
@@ -330,8 +343,7 @@
             b_Raiz.TabIndex = 3;
             b_Raiz.Text = "2√\nx\r\n";
             b_Raiz.UseVisualStyleBackColor = true;
-            b_Raiz.Click += b1_Click;
-            // 
+       
             // b3
             // 
             b3.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -350,10 +362,11 @@
             label1.Name = "label1";
             label1.Size = new Size(0, 20);
             label1.TabIndex = 2;
-            label1.Click += label1_Click;
+           
             // 
             // Lresultado
             // 
+            Lresultado.AccessibleName = "CALCULADORA";
             Lresultado.BackColor = SystemColors.ButtonHighlight;
             Lresultado.BorderStyle = BorderStyle.Fixed3D;
             Lresultado.Font = new Font("Arial Rounded MT Bold", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -361,6 +374,9 @@
             Lresultado.Name = "Lresultado";
             Lresultado.Size = new Size(494, 155);
             Lresultado.TabIndex = 3;
+            Lresultado.Tag = "";
+            Lresultado.Text = "0";
+            Lresultado.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
@@ -405,7 +421,7 @@
         private Button b_5;
         private Button b_4;
         private Button b_multiplicar;
-        private Button button12;
+        private Button b_9;
         private Button b_8;
         private Label label1;
         private Label Lresultado;
